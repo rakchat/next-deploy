@@ -38,8 +38,9 @@ export default function Home() {
         <div>
           <Row gutter={[16, 24]}>
             {users?.map((item) => {
+              const { id } = item ?? {};
               return (
-                <Col key={item.id} span={6}>
+                <Col key={id} xs={12} sm={12} md={12} lg={8} xl={6} xxl={6}>
                   <Card title={item.name}>
                     <p>Email: {item.email}</p>
                   </Card>
